@@ -16,7 +16,7 @@
 
 ## Execution Procedure
 
-``$ git clone git@github.com:fredagbona/original-application-diver.git
+``$ git clone https://github.com/fredagbona/original-application-diver.git
 
 $ cd meetdoctor
 
@@ -40,7 +40,8 @@ $ rails s``
 
 ## ER Diagram
 
-![ER Diagram](https://github.com/fredagbona/original-application-diver/issues/1#issue-1024181025)
+![er_diagram](https://user-images.githubusercontent.com/67292489/137015450-26b7720f-52ef-4ecc-9065-14d4bb11e46c.png)
+
 
 <https://viewer.diagrams.net/?page-id=a4hX92RwQ5O4fryRvku7&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
 
