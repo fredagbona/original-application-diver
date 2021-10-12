@@ -16,6 +16,7 @@
 
 ## Execution Procedure
 
+```
 $ git clone git@github.com:fredagbona/original-application-diver.git
 $ cd meetdoctor
 $ bundle install
@@ -23,6 +24,7 @@ $ rails db:create
 $ rails db:migrate
 $ rails db:seed
 $ rails s
+```
 
 
 
