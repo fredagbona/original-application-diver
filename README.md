@@ -16,12 +16,19 @@
 
 ## Execution Procedure
 
-``git clone git@github.com:fredagbona/original-application-diver.git
-cd meetdoctor
-bundle install
-rails db:createrails db:migrate
-rails db:seed
-rails s``
+``$ git clone git@github.com:fredagbona/original-application-diver.git
+
+$ cd meetdoctor
+
+$ bundle install
+
+$ rails db:create
+
+$ rails db:migrate
+
+$ rails db:seed
+
+$ rails s``
 
 ## Catalog Design
 
@@ -33,7 +40,7 @@ rails s``
 
 ## ER Diagram
 
-![ER Diagram](https://drive.google.com/file/d/1532c4tMWUkEa_BW7-yIzmMqvtxW-VxBq/view?usp=sharing)
+![ER Diagram](https://github.com/fredagbona/original-application-diver/issues/1#issue-1024181025)
 
 <https://viewer.diagrams.net/?page-id=a4hX92RwQ5O4fryRvku7&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
 
