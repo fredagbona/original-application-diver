@@ -1,0 +1,16 @@
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/racc-1.5.2/ext/racc/cparse
+/home/prohackfr/.rbenv/versions/2.6.5/bin/ruby -I /home/prohackfr/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211012-125579-1nxbiw6.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20211012-125579-18vg3ty/racc

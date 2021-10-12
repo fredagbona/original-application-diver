@@ -1,0 +1,34 @@
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bootsnap-1.9.1/ext/bootsnap
+/home/prohackfr/.rbenv/versions/2.6.5/bin/ruby -I /home/prohackfr/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211012-125579-uxp5jd.rb extconf.rb
+creating Makefile
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:355:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  355 |   char * cachedir = RSTRING_PTR(cachedir_v);
+      |   ^~~~
+bootsnap.c: In function ‘bs_rb_precompile’:
+bootsnap.c:382:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  382 |   char * cachedir = RSTRING_PTR(cachedir_v);
+      |   ^~~~
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:742:13: warning: ‘output_data’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  742 |     else if (!NIL_P(output_data)) goto succeed; /* fast-path, goal */
+      |             ^
+bootsnap.c:705:9: note: ‘output_data’ was declared here
+  705 |   VALUE output_data;  /* return data, e.g. ruby hash or loaded iseq */
+      |         ^~~~~~~~~~~
+bootsnap.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20211012-125579-cnymlr/bootsnap

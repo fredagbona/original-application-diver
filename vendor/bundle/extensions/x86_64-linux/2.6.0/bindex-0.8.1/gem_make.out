@@ -1,0 +1,15 @@
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+/home/prohackfr/.rbenv/versions/2.6.5/bin/ruby -I /home/prohackfr/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211012-125579-8654ut.rb extconf.rb
+creating Makefile
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20211012-125579-28iv7a/skiptrace/internal
