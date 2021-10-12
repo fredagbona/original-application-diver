@@ -16,19 +16,13 @@
 
 ## Execution Procedure
 
-```$ git clone https://github.com/fredagbona/original-application-diver.git`
-
-`$ cd meetdoctor`
-
-`$ bundle install`
-
-`$ rails db:create`
-
-`$ rails db:migrate`
-
-`$ rails db:seed`
-
-`$ rails s```
+``$ git clone https://github.com/fredagbona/original-application-diver.git<br>
+$ cd meetdoctor<br>
+$ bundle install<br>
+$ rails db:create<br>
+$ rails db:migrate<br>
+$ rails db:seed<br>
+$ rails s``
 
 
 ## Catalog Design
