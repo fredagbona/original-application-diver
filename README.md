@@ -16,7 +16,7 @@
 
 ## Execution Procedure
 
-`` `$ git clone https://github.com/fredagbona/original-application-diver.git`
+```$ git clone https://github.com/fredagbona/original-application-diver.git`
 
 `$ cd meetdoctor`
 
@@ -28,7 +28,7 @@
 
 `$ rails db:seed`
 
-`$ rails s` ``
+`$ rails s```
 
 
 ## Catalog Design
