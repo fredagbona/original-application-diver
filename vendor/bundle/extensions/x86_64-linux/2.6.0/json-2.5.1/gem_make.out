@@ -1,0 +1,13 @@
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/json-2.5.1/ext/json
+/home/prohackfr/.rbenv/versions/2.6.5/bin/ruby -I /home/prohackfr/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211013-73145-1uioecc.rb extconf.rb
+creating Makefile
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/json-2.5.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/json-2.5.1/ext/json
+make "DESTDIR="
+make: rien à faire pour « all ».
+
+current directory: /home/prohackfr/workspace/Ruby/rails/final_project/meetdoctor/vendor/bundle/gems/json-2.5.1/ext/json
+make "DESTDIR=" install

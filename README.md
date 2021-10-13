@@ -45,9 +45,9 @@ $ rails s
 
 ## Screen Transition Diagram
 
-![Screen Transition Diagram](https://cacoo.com/diagrams/gdOJqkeQdlsUMPEq-54CD1.png)
+![Screen Transition Diagram](https://cacoo.com/diagrams/kTEH0EEhuvyXwDH3-1381B.png)
 
-<https://cacoo.com/diagrams/gdOJqkeQdlsUMPEq/54CD1>
+<https://cacoo.com/diagrams/kTEH0EEhuvyXwDH3/1381B>
 
 ## Wireframe
 
