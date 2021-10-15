@@ -45,7 +45,7 @@ $ rails s
 
 ## Screen Transition Diagram
 
-![Screen Transition Diagram](https://cacoo.com/diagrams/kTEH0EEhuvyXwDH3-1381B.png)
+![Screen Transition](https://user-images.githubusercontent.com/67292489/137511936-3b15fe64-31e0-45fa-934d-f66b96703c6e.png)
 
 <https://cacoo.com/diagrams/kTEH0EEhuvyXwDH3/1381B>
 
