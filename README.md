@@ -8,11 +8,11 @@
 ## Employment Term Technologies
 
 * Devise
-* Fonction de commentaire
+* Comment Function
 
 ## Technologies outside curriculum
 
-* Gmaps4rails
+* Cloudinary
 
 ## Execution Procedure
 
@@ -38,10 +38,10 @@ $ rails s
 
 ## ER Diagram
 
-![er_diagram](https://user-images.githubusercontent.com/67292489/137015450-26b7720f-52ef-4ecc-9065-14d4bb11e46c.png)
+![ER Diagram](https://user-images.githubusercontent.com/67292489/137508834-7060c721-d0f8-41cd-b5ad-6ca76d911476.png)
 
 
-<https://viewer.diagrams.net/?page-id=a4hX92RwQ5O4fryRvku7&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
+<https://viewer.diagrams.net/?page-id=a4hX92RwQ5O4fryRvku7&page-id=a4hX92RwQ5O4fryRvku7&highlight=0000ff&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
 
 ## Screen Transition Diagram
 
@@ -51,4 +51,4 @@ $ rails s
 
 ## Wireframe
 
-<https://viewer.diagrams.net/?page-id=BJYLrvfdhhGHj9TGmXTG&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
+<https://viewer.diagrams.net/?page-id=BJYLrvfdhhGHj9TGmXTG&highlight=0000ff&layers=1&nav=1&hide-pages=1&viewbox=%7B%22x%22%3A1640%2C%22y%22%3A5413%2C%22width%22%3A1351%2C%22height%22%3A961%2C%22border%22%3A100%7D#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
