@@ -1,8 +1,8 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
+<nav class="navbar navbar-expand-lg mynav" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <%= image_tag "/logo_blanc.jpg", width: "50px" %>
+    <a class="navbar-brand text-light" href="#">
+        <%= image_tag "/logo.jpg", width: "50px" %> MeetDoctor
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,25 +10,46 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Adverts</a>
+          <a class="nav-link text-white" href="#">Adverts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Directory</a>
+          <a class="nav-link text-white" href="#">Directory</a>
         </li>
       </ul>
-      <div class="d-flex">
-        <a class="me-2 btn btn-primary" href="#">Sign in</a>
-        <a class="btn btn-primary" href="#">Log in</a>
+      <div class="d-flex ">
+        <a class="me-2 btn btn-danger" href="#">Sign in</a>
+        <a class="btn btn-danger" href="#">Log in</a>
       </div>
     </div>
   </div>
 </nav>
 <section class="container-fluid section-bg">
-
+  <div class="position-relative">
+  <p class="text-end text-first me-2 fs-1 text-white"><b>MeetDoctor</b>,<br> the ideal<br> platform to<br> make a medical<br> appointment.</p>
+</div>
 </section>
-<section class="container">
-    
+<section class="container pt-5">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 pe-3">
+        <%= image_tag "/annuaire.jpg", width: "400px" %>
+      </div>
+      <div class="col-md-4 col-sm-8">
+        <p class="fs-1 text-start  pt-5 ">Meet Doctor,<br>
+          It is also a directory of<br> medical specialists,<br> their addresses and<br> their services.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-sm-8 ps-3">
+        <p class="fs-1 text-start  pt-5 ">Meet Doctor,<br>
+          It is also a directory of<br> medical specialists,<br> their addresses and<br> their services.</p>
+      </div>
+      <div class=" col-md-4 col-sm-8 pt-3">
+        <%= image_tag "/advert.jpg", width: "500px" %>
+      </div>
+      
+    </div>
 </section>
