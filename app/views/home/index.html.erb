@@ -1,8 +1,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-<nav class="navbar navbar-expand-lg mynav" id="scene" >
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg mynav"  >
+  <div class="container-fluid" id="">
     <a class="navbar-brand text-light logo" href="#">
         <%= image_tag "/logo.jpg", width: "30px" %> MeetDoctor
     </a>
@@ -10,9 +10,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+       
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+          <a class="nav-link active text-white pe-4" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Adverts</a>
@@ -80,8 +82,7 @@ height: 50px;">
 </footer>
 
 <script>
-  var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene);
+  
 
   TweenMax.from(".logo", 1, {
     opacity: 0,
