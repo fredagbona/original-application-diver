@@ -8,7 +8,7 @@
 ## Employment Term Technologies
 
 * Devise
-* Comment Function
+* Comment Function using Ajax
 
 ## Technologies outside curriculum
 
