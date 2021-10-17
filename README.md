@@ -38,7 +38,7 @@ $ rails s
 
 ## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/67292489/137626143-8c1f4663-c63a-4cb4-9d7f-3514cd0ab568.png)
+![ER Diagram](https://user-images.githubusercontent.com/67292489/137630609-670b2311-6620-4282-8b2a-c06419ce9020.png)
 
 
 <https://viewer.diagrams.net/?page-id=a4hX92RwQ5O4fryRvku7&page-id=a4hX92RwQ5O4fryRvku7&highlight=0000ff&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
