@@ -38,10 +38,10 @@ $ rails s
 
 ## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/67292489/137798723-7e336e3d-6b06-48a8-bfff-3b10400e6aec.png)
+![ER Diagram](https://user-images.githubusercontent.com/67292489/137910617-00ba1d60-2063-4872-b5f2-89d4d0b41c9e.png)
 
 
-<https://viewer.diagrams.net/?page-id=a4hX92RwQ5O4fryRvku7&page-id=a4hX92RwQ5O4fryRvku7&highlight=0000ff&layers=1&nav=1&hide-pages=1#G1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z>
+<https://drive.google.com/file/d/1GA2Jdf9WpxGSTt6167EPsB__T9WYBn2Z/view?usp=sharing>
 
 ## Screen Transition Diagram
 
