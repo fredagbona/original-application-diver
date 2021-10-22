@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <%= image_tag(@doctor.user.avatar.url, class: "card-img-top img-thumbnail") if @doctor.user.avatar && @doctor.user.avatar.url  %>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Dr <%= @doctor.user.name %> </h5>
+                    <hr>
+                    <p class="card-text"> <b>Speciality :</b> <%= @doctor.speciality %></p>
+                    <p class="card-text"><b>Address :</b> <%= @doctor.user.address %> </p>
+                    <p class="card-text"><b>Phone Number :</b> <%= @doctor.user.phone_number %> </p>
+                    <hr>
+                    <a href="#" class="ms-5 btn btn-success"> Make Appointment </a>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+</div>
+

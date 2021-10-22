@@ -15,9 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 gem 'carrierwave'
-gem 'mini_magick'
-
-
+gem 'cloudinary'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -31,6 +29,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rails_real_favicon'
+  gem 'dotenv-rails'
 end
 
 group :test do

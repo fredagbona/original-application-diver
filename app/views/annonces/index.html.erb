@@ -1,0 +1,34 @@
+
+
+<h1>Adverts</h1>
+
+<div class="container">
+  <div class="d-flex justify-content-between row ">
+     <% @annonces.each do |annonce| %>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+             <%= image_tag(annonce.image.url, class: "img-fluid rounded-start") if annonce.image && annonce.image.url  %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title"> <%= annonce.title %> </h4>
+                <p class="card-text">By <b> Dr <%= annonce.user.name  %> </b> </p>
+
+                <%= link_to 'See more', annonce, class: "btn btn-outline-primary btn-sm" %>
+                <% if annonce.user == current_user %>
+                  <%= link_to 'Edit', edit_annonce_path(annonce), class: "btn btn-outline-success btn-sm" %>
+                  <%= link_to 'Delete', annonce, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+                <% end %>
+                <br>
+                <br>
+                <p class="card-text"><small class="text-muted">Last updated <%= annonce.created_at%> </small></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+  

@@ -10,9 +10,84 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
-    <%= yield %>
-  
+      <% if notice %> 
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <p class="notice"><%= notice %></p> 
+             
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% end %>
+       <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+        
+      
+      <% if user_signed_in? %>
+              <nav class="navbar navbar-expand-lg mynav"  >
+            <div class="container-fluid" id="">
+              <a class="navbar-brand text-light logo" href="#">
+                <%= image_tag "/logo.jpg", width: "30px" %> MeetDoctor
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+              
+                <li class="nav-item">
+                  <%= link_to 'Home', home_index_path, class: "nav-link text-white pe-4"%>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Adverts', annonces_path, class: "nav-link text-white"%>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'Directory', doctors_path, class: "nav-link text-white"%>
+                </li>
+              </ul>
+              <div class="d-flex  ">
+              <%= link_to "Profile", profile_index_path, class: " me-2 btn btn-success account text-white"%> 
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-light text-success account" %> 
+              </div>
+            </div>
+          </div>
+        </nav>
+         
+      <% else%> 
+              <nav class="navbar navbar-expand-lg mynav"  >
+                <div class="container-fluid" id="">
+              <a class="navbar-brand text-light logo" href="#">
+                  <%= image_tag "/logo.jpg", width: "30px" %> MeetDoctor
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                
+                  <li class="nav-item">
+                  <%= link_to 'Home', home_index_path, class: "nav-link text-white pe-4"%>
+                    
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to 'Adverts', annonces_path, class: "nav-link text-white"%>
+                  </li>
+                  <li class="nav-item">
+                  <%= link_to 'Directory', doctors_path, class: "nav-link text-white"%>
+                  </li>
+                </ul>
+                <div class="d-flex  ">
+                  <a class="me-2 btn btn-light text-success account" href="/users/sign_up">Sign in</a>
+                  <a class="btn btn-success account text-white" href="/users/sign_in">Log in</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+         
+      <% end %>
+       
+        <%= yield %>
+      <%= render 'partials/foot' %>
   </body>
 </html>

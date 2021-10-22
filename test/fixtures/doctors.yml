@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  speciality: MyString
+  hourly: MyText
+  user: one
+
+two:
+  speciality: MyString
+  hourly: MyText
+  user: two
