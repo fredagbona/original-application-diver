@@ -1,3 +1,5 @@
+
+
 <div class="container mt-5">
 
     <div class="card mb-3" style="max-width: 540px;">
@@ -8,12 +10,18 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">Dr <%= @doctor.user.name %> </h5>
+                    <p class="card-text fs-5"><small class="text-muted">Specialist in <%= @doctor.speciality %> </small></p>
+                   <hr>
+                    
+                    <p class="card-text fs-5 "> <i class="bi bi-calendar-fill text-success"></i> <%= @doctor.hourly %> </p>
+                    <p class="card-text fs-5"><i class="bi bi-geo-alt-fill text-success"></i> <%= @doctor.user.address %> </p>
+                    <p class="card-text fs-5"> <i class="bi bi-telephone-fill text-success "></i> <%= @doctor.user.phone_number %> </p>
                     <hr>
-                    <p class="card-text"> <b>Speciality :</b> <%= @doctor.speciality %></p>
-                    <p class="card-text"><b>Address :</b> <%= @doctor.user.address %> </p>
-                    <p class="card-text"><b>Phone Number :</b> <%= @doctor.user.phone_number %> </p>
-                    <hr>
-                    <a href="#" class="ms-5 btn btn-success"> Make Appointment </a>
+                    <% if current_user.establishment%>
+                    <% else%>
+                         <%= link_to 'Make Appointment', appointment_doctor_path, class: "ms-5 btn btn-success text-white" %>
+                       
+                    <% end %>
                 </div>  
             </div>
         </div>

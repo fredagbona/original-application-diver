@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_170945) do
+ActiveRecord::Schema.define(version: 2021_10_23_133007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 2021_10_22_170945) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_annonces_on_user_id"
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "doctor_id"
+    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
+    t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "annonce_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["annonce_id"], name: "index_comments_on_annonce_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "doctors", force: :cascade do |t|
@@ -53,5 +73,9 @@ ActiveRecord::Schema.define(version: 2021_10_22_170945) do
   end
 
   add_foreign_key "annonces", "users"
+  add_foreign_key "appointments", "doctors"
+  add_foreign_key "appointments", "users"
+  add_foreign_key "comments", "annonces"
+  add_foreign_key "comments", "users"
   add_foreign_key "doctors", "users"
 end

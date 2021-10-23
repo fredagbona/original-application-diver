@@ -9,7 +9,15 @@
 
    <p class="card-text">By <b> Dr <%= @annonce.user.name %> </b> </p> <br> <br>
     <p class="card-text"><small class="text-muted">Last updated at <%= @annonce.created_at %> </small></p>
-</div><br><br>
+</div><br><br><br>
+
+  <div id="comments_area">
+   
+    <%= render partial: 'comments/index', locals: { comments: @comments, annonce: @annonce } %>
+    
+  </div>
+ 
+  <%= render partial: 'comments/form', locals: { comment: @comment, annonce: @annonce } %>
 
 
 <%= link_to 'Back', annonces_path, class: "btn btn-info btn-sm text-white" %>

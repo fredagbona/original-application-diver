@@ -1,14 +1,17 @@
 class AnnoncesController < ApplicationController
   before_action :set_annonce, only: %i[ show edit update destroy ]
   before_action :doctor_required, only: [:new, :create, :edit]
-
+  before_action :authenticate_user!
+  
   # GET /annonces or /annonces.json
   def index
-    @annonces = Annonce.all
+    @annonces = Annonce.all.order(created_at: :desc)
   end
 
   # GET /annonces/1 or /annonces/1.json
   def show
+    @comments = @annonce.comments
+    @comment = @annonce.comments.build
   end
 
   # GET /annonces/new
@@ -28,8 +31,10 @@ class AnnoncesController < ApplicationController
     respond_to do |format|
       if @annonce.save
         format.html { redirect_to @annonce, notice: "Annonce was successfully created." }
+        format.js { render :index }
       else
         format.html { render :new, status: :unprocessable_entity }
+        format.js { render :index }
       end
     end
   end

@@ -1,0 +1,20 @@
+<ul class="border border-2 border-primary rounded-start">
+  <% comments.each do |comment| %>
+    <% if comment.id.present? %>
+      <li>
+        <div class="comment-content" id ="this_comment_<%= comment.id %>"></div>
+        <% if comment.user.establishment%>
+          <p> <b> Dr <%= comment.user.name %> </b> </p>
+        <% else %>
+          <p> <b> <%= comment.user.name %> </b> </p>
+        <% end %>
+        <p><%= comment.content %></p>
+        <p class="card-text"><small class="text-muted ms-5">Last updated at <%= comment.created_at %> </small></p>
+        <% if current_user.id == comment.user.id%>
+          <p><%= link_to "Edit comment", edit_annonce_comment_path(annonce, comment), remote: true %></p>
+        <% end %>
+        <hr>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

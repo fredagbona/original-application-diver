@@ -1,7 +1,8 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: %i[ show edit update  ]
+  before_action :set_doctor, only: %i[ show edit update  create_appointment ]
   before_action :doctor_required, only: [:new, :create, :edit, :destroy]
- 
+  before_action :authenticate_user!
+  
   def index
     @doctors = Doctor.all
   end
@@ -28,6 +29,28 @@ class DoctorsController < ApplicationController
     end
   end
 
+  def appointment
+    @appointment = Appointment.new
+  end
+
+  def create_appointment
+    @appointment = Appointment.new(appointment_params)
+    @appointment.user = current_user
+    @appointment.doctor = @doctor
+  
+    
+    respond_to do |format|
+ 
+      if @appointment.save
+        AppointmentMailer.new_appointment_mail(@appointment).deliver_later
+        format.html { redirect_to @appointment, notice: "Appointment was successfully created." }
+        format.json { render :show, status: :created, location: @appointment }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @appointment.errors, status: :unprocessable_entity }
+      end
+    end
+  end
   def edit
   end
 
@@ -52,5 +75,7 @@ class DoctorsController < ApplicationController
     def doctor_params
       params.require(:doctor).permit(:speciality, :hourly)
     end
-  
+    def appointment_params
+      params.require(:appointment).permit(:message)
+    end
 end

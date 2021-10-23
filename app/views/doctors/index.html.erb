@@ -6,8 +6,9 @@
                 <div class="card-body">
                 <h5 class="card-title">Dr <%= doctor.user.name %> </h5>
                 
-                <p class="card-text"> <b>Speciality :</b> <%= doctor.speciality %></p>
-                <p class="card-text"><b>Address :</b> <%= doctor.user.address %> </p>
+                <p class="card-text fs-5"><small class="text-muted">Specialist in <%= doctor.speciality %> </small></p>
+                
+                <p class="card-text fs-5"><i class="bi bi-geo-alt-fill text-primary"></i> <%= doctor.user.address %> </p>
                 <%= link_to 'See more', doctor, class: "btn btn-outline-primary" %>
                 </div>
             </div>

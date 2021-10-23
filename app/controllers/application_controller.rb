@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :address, :phone_number, :password, :current_password, :establishment,:avatar, :avatar_cache)}
   end
 
+ 
+
   private
   def doctor_required
     redirect_to profile_index_path unless current_user.establishment
