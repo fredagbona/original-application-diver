@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   end 
  
   get 'profile/index'
-  devise_for :users
+  devise_for :users, controllers:{
+    sessions: 'sessions'
+  
+} 
 
   root 'home#index'
   

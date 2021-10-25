@@ -7,7 +7,12 @@
     <%= render 'application/favicon' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_f13bde68bf65e345c3f6230b962cb6514'
+    });
+</script>
   </head>
   <style>
        a:hover{
@@ -101,5 +106,10 @@
        
         <%= yield %>
       <%= render 'partials/foot' %>
+      <script>
+    Weglot.initialize({
+        api_key: 'wg_f13bde68bf65e345c3f6230b962cb6514'
+    });
+</script>
   </body>
 </html>
