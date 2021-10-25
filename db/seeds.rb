@@ -3,7 +3,34 @@
 #
 # Examples:
     
+    #Create Guest  User as Patient
+    User.create(
+        name: "Guest Patient",
+        email: "guestpatient@gmail.com",
+        address: "Calavi",
+        phone_number: "85693214",
+        password: "guestpatient",
+    )
 
+    #Create Guest User as Doctor
+    User.create(
+        name: "Guest Doctor",
+        email: "guestdoctor@gmail.com",
+        address: "Grand Popo",
+        phone_number: "41253636",
+        password: "guestdoctor",
+        establishment: "true"
+    )
+
+    #Create Guest User as Admin
+    User.create(
+        name: "Guest Admin",
+        email: "guestadmin@gmail.com",
+        address: "Allada",
+        phone_number: "96362578",
+        password: "guestadmin",
+        admin: "true"
+    )
  
     
 
