@@ -2,34 +2,10 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-    # Create User Patient as Guest
-    User.create(
-        name: "Guest Patient",
-        email: "guestpatient@gmail.com",
-        address: "Porto",
-        phone_number: "95214782",
-        password: "guestpatient"
-    )
+    
 
-    #Create User Doctor as Guest
-    User.create(
-        name: "Guest Doctor",
-        email: "guestdoctor@gmail.com",
-        address: "Ouidah",
-        phone_number: "97856314",
-        password: "guestdoctor",
-        establishment: "true"
-    )
-
-    #Create User Admin as Guest
-    User.create(
-        name: "Guest Admin",
-        email: "guestadmin@gmail.com",
-        address: "Bohicon",
-        phone_number: "95214782",
-        password: "guestadmin",
-        admin: "true"
-    )
+ 
+    
 
     #Create real User Admin
     User.create(
