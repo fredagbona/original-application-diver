@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+gem 'rails_admin', '~> 2.0'
+
 gem 'carrierwave'
 gem 'cloudinary'
 

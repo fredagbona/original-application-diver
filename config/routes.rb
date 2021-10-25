@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
- 
-  
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  post 'guest', to: 'profile#guest_user', as: 'guest_user'
+  post 'guestdoctor', to: 'profile#guest_doctor', as: 'guest_doctor'
+  post 'guestadmin', to: 'profile#guest_admin', as: 'guest_admin'
+
   resources :appointments
   resources :annonces do
     resources :comments
@@ -16,7 +19,9 @@ Rails.application.routes.draw do
  
   get 'profile/index'
   devise_for :users
+
   root 'home#index'
+  
   get 'home/index'
   get 'home/help'
   
