@@ -43,8 +43,8 @@ class DoctorsController < ApplicationController
  
       if @appointment.save
         AppointmentMailer.new_appointment_mail(@appointment).deliver_later
-        format.html { redirect_to @appointment, notice: "Appointment was successfully created." }
-        format.json { render :show, status: :created, location: @appointment }
+        format.html { redirect_to profile_index_path, notice: "Appointment was successfully created." }
+ 
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }

@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       if @comment.save
         format.js { render :index }
       else
-        format.html { redirect_to annonce_path(@annonce), notice: 'Impossible de commenter...' }
+          format.html { redirect_to annonce_path(@annonce), notice: 'Vous ne pouvez pas faire un commentaire vide...' }
       end
     end
   end

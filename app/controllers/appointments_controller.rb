@@ -1,10 +1,11 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  before_action :patient_required, only: %i[new create edit]
 
   # GET /appointments or /appointments.json
   def index
-    @appointments = Appointment.all
+    @appointments = current_user.appointments.all
   end
 
   # GET /appointments/1 or /appointments/1.json
@@ -32,8 +33,8 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: "Appointment was successfully created." }
-        format.json { render :show, status: :created, location: @appointment }
+        format.html { redirect_to profile_index_path, notice: "Appointment was successfully created." }
+      
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }

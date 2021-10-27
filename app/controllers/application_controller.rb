@@ -16,5 +16,10 @@ class ApplicationController < ActionController::Base
   def doctor_required
     redirect_to profile_index_path unless current_user.establishment
   end
+  def patient_required     
+    if not(current_user.establishment) 
+      redirect_to profile_index_path
+    end
+  end
   
 end
