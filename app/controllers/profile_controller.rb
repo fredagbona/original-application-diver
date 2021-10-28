@@ -1,7 +1,8 @@
 class ProfileController < ApplicationController
   def index
     @user = current_user 
-    @appointments = current_user.appointments.all
+    @appointments = current_user.appointments.all.order(created_at: :desc)
+    @annonces = current_user.annonces.all.order(created_at: :desc)
    
   end
 

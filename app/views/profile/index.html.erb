@@ -18,11 +18,75 @@
     <div class="col-4 col-sm-6">
       <%= render 'partials/sidebar' %>
     </div>
-    <div class="col-8 col-sm-6">
+    <div class="col-8 col-sm-4 pt-2">
           
        <div class="d-flex justify-content-between row ">
-       
+          <% if current_user.establishment %>
+            <% if @annonces.present? %>
+                <h2 class="text-center"> My posts </h2>
+              <% @annonces.each do |annonce| %>
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                    <%= image_tag(annonce.image.url, class: "img-fluid rounded-start") if annonce.image && annonce.image.url  %>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title"> <%= annonce.title %> </h4>
+                        <p class="card-text">By <b> Dr <%= annonce.user.name  %> </b> </p>
 
+                        <%= link_to 'See more', annonce, class: "btn btn-outline-primary btn-sm" %>
+                        
+                          <%= link_to 'Edit', edit_annonce_path(annonce), class: "btn btn-outline-success btn-sm" %>
+                          <%= link_to 'Delete', annonce, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+                       
+                        <br>
+                        <br>
+                        <p class="card-text"><small class="text-muted">Last updated <%= annonce.created_at%> </small></p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %> 
+            <% else %>
+                <h2 class="text-center"> No posts </h2>
+            <% end %>
+          <% else %>
+              <% if @appointments.present?%>
+                <h3>My Appointment Requests</h3>
+                    <table class="table table-success table-striped table-hover">
+                  
+                      <tr>
+                        <th>Patient Name</th>
+                        <th>Doctor Name</th>
+                        <th>Appointment Demand</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    
+                  
+                    
+                      <% @appointments.each do |appointment| %>
+                        <tr>
+                          <td><%= appointment.user.name %></td>
+                          <td><%= appointment.doctor.user.name %></td>
+                            <td><%= appointment.message %></td>
+                            <td><%= link_to  appointment, title: "Show" do %>  <i class="bi bi-eye"></i>
+                              <% end %> </td>
+                            <td><%= link_to edit_appointment_path(appointment), title: "Edit" do %> <i class="bi bi-pencil" style="color: green;"></i>
+                              <% end %> </td>
+                            <td><%= link_to appointment, title: "Supprimer", method: :delete, data: { confirm: 'Are you sure?' } do %> <i class="bi bi-trash" style="color: red;"></i>
+                              <% end %> </td>
+                        </tr>
+                      <% end %>
+                    
+                  </table>
+              <% else %>
+                  <h3>No Appointment Demands</h3>
+              <% end %>
+          <% end %>
 
       </div>  
 

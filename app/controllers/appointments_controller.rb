@@ -5,7 +5,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments or /appointments.json
   def index
-    @appointments = current_user.appointments.all
+    @appointments = current_user.appointments.all.order(created_at: :desc)
   end
 
   # GET /appointments/1 or /appointments/1.json

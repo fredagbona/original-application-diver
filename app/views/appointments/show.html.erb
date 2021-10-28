@@ -1,9 +1,33 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @appointment.message %>
-</p>
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title"> <%= @appointment.user.name %> </h4>
+                <p class="card-text">At <b> Dr <%= @appointment.doctor.user.name  %> </b> </p>
+                <p class="card-text">Massage: <b>  <%= @appointment.message  %> </b> </p>
+                <%= link_to 'Edit', edit_appointment_path(@appointment), class: "btn btn-outline-success btn-sm" %> |
+                <%= link_to 'Back', appointments_path, class: "btn btn-outline-secondary btn-sm" %>
+               
+                <br>
+                <br>
+                <p class="card-text"><small class="text-muted">Last sended <%= @appointment.created_at%> </small></p>
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
+
+
+
