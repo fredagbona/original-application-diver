@@ -2,15 +2,7 @@ require 'rails_helper'
 
 # RSpec.describe User, type::model do
 describe 'Appointment Creation' do
-    context "Creation avec données invalides" do
-      it "Creation échoué lorsqu'on ne renseigne pas le titre" do
-        @appointment = Appointment.new(
-          message: "Abomey"
-        )
-        expect(@appointment).not_to be_valid
-      end
-
-    end
+    
     
     context "Création avec données valides" do
         it "Creation valide lorsqu'on  renseigne tous les champs" do

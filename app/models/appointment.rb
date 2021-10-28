@@ -1,8 +1,8 @@
 class Appointment < ApplicationRecord
 
-  belongs_to :user, required: true
+  belongs_to :user, optional: true
 
-  belongs_to :doctor, required: true
+  belongs_to :doctor, optional: true
 
  validates :message, presence: true
  

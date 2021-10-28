@@ -1,34 +1,54 @@
-<%= form_with(model: annonce, local: true) do |form| %>
-  <% if annonce.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(annonce.errors.count, "error") %> prohibited this annonce from being saved:</h2>
+<div class="container pt-5">
+    <div class="row">
+      <div class="col-3">
+      
+      </div>
+      <div class="col-6">
+            <%= form_with(model: annonce, local: true) do |form| %>
+              <% if annonce.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(annonce.errors.count, "error") %> prohibited this annonce from being saved:</h2>
 
-      <ul>
-      <% annonce.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= image_tag(@annonce.image.url) if @annonce.image && @annonce.image.url %>
+                  <ul>
+                  <% annonce.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+              <% end %>
+                  </ul>
+                </div>
+            <% end %>
+            
+          <div class="mt-2">
+            <%= form.label :title, class: "form-label" %>
+            <%= form.text_field :title, class: "form-control" %>
+          </div>
+        
+          <div class="mt-2">
+            <%= form.label :content, class: "form-label" %>
+            <%= form.text_area :content, class: "form-control"  %>
+          </div><br>
+          <div class="mt-2">
+             <%= image_tag(@annonce.image.url) if @annonce.image && @annonce.image.url %>
     
-    <%= form.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
-     <%= form.hidden_field :image_cache %>
-  </div>
+            <%= form.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+            <%= form.hidden_field :image_cache %>
+          </div><br>
+          <div class="mt-2">
+            <%= form.submit class: "btn btn-success" %>
+          </div>
+        <% end %>
+      
+      </div>
+      <div class="col-3">
+      
+      </div>
+    </div>
+</div
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+
+
+
+
+
+
+
+
