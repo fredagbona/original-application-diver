@@ -56,7 +56,7 @@ class DoctorsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @user.update(user_params)
+      if @doctor.update(doctor_params)
         format.html { redirect_to profile_index_path, notice: "Informations was successfully updated." }
         
       else
