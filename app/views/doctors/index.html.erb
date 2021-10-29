@@ -1,4 +1,9 @@
-<h1>Doctors</h1>
+<title> Doctor's Directory | MeetDoctor</title>
+
+<h1 class="pt-3 text-center"> <i class="bi bi-journals"></i> Doctor's Directory</h1>
+<div class="container-fluid bg-info">
+    <h6 class="text-center text-white"> Click on "See more" to access the profile of the doctor of your choice. | Consult the <%= link_to 'F.A.Q', home_help_path, class: "btn btn-sm btn-warning m-2 text-white" %>  for more information.</h6>
+</div>
 <div class="container mt-5" id="toppage">
     <div class="d-flex justify-content-between row ">
         <% @doctors.each do |doctor| %>
@@ -16,7 +21,7 @@
             <% end %>
     </div>
 </div>
-<a href="#topage" class="btn btn-outline-danger">Return top </a>
+<a href="#topage" class="btn btn-outline-info ms-5">Return top </a> <br><br><br><br><br><br>
 
 
 

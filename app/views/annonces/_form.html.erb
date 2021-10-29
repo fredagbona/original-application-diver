@@ -27,14 +27,15 @@
             <%= form.text_area :content, class: "form-control"  %>
           </div><br>
           <div class="mt-2">
-             <%= image_tag(@annonce.image.url) if @annonce.image && @annonce.image.url %>
-    
-            <%= form.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+             <%= image_tag(@annonce.image.url,  width: "400px") if @annonce.image && @annonce.image.url %>
+            <br>   <br>
+            <%= form.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "form-control" %>
+            
             <%= form.hidden_field :image_cache %>
           </div><br>
           <div class="mt-2">
             <%= form.submit class: "btn btn-success" %>
-          </div>
+          </div><br><br><br>
         <% end %>
       
       </div>

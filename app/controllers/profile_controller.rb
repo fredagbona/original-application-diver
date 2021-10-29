@@ -4,6 +4,7 @@ class ProfileController < ApplicationController
     @appointments = current_user.appointments.all.order(created_at: :desc)
     @annonces = current_user.annonces.all.order(created_at: :desc)
    
+   
   end
 
   def guest_user

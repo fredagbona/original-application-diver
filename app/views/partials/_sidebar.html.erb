@@ -81,11 +81,22 @@
 
   
 
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-success" style="width: 280px; height:80vh;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="fs-4">MENU</span>
-    </a>
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-success mt-4" style="width: 280px; height:100%;">
+    <br>
+    <div class="dropdown ">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <%= image_tag(@user.avatar.url, width: "30px", class: "rounded") if @user.avatar && @user.avatar.url  %>
+        
+        <strong><%= @user.name %></strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small      shadow" aria-labelledby="dropdownUser1">
+        <li><%= link_to "Profile", profile_index_path, class: "dropdown-item" %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-light text-success account dropdown-item" %>  </li>
+      </ul>
+    </div><br><br>
+    <hr>
+     <p class="text-center"> <span class="fs-4">MENU</span></p>
+  
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
@@ -117,17 +128,7 @@
       
     </ul>
     <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <%= image_tag(@user.avatar.url, width: "30px", class: "rounded") if @user.avatar && @user.avatar.url  %>
-        
-        <strong><%= @user.name %></strong>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small      shadow" aria-labelledby="dropdownUser1">
-        <li><%= link_to "Profile", profile_index_path, class: "dropdown-item" %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-light text-success account dropdown-item" %>  </li>
-      </ul>
-    </div>
+    
 
     
 

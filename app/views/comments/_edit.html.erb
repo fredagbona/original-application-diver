@@ -10,10 +10,10 @@
     </div>
   <% end %>
   <div class="field">
-    <%= form.text_area :content, id: "comment_content_#{annonce.id}", class: "form-label" %>
-    <%= form.label :content, class: "form-control" %>
+    <%= form.text_area :content, id: "comment_content_#{annonce.id}", class: "form-control" %>
+    
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Update", class: "btn btn-sm btn-info" %>
   </div>
 <% end %>

@@ -1,24 +1,37 @@
+<title>Annonce N° <%= @annonce.id %>| MeetDoctor</title>
 
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">  <%= @annonce.title %> </h5>
-   <p class="card-text">  <%= @annonce.content %> </p><br>
-   
-  </div>
-  <%= image_tag(@annonce.image.url,  class: "card-img-top") if @annonce.image && @annonce.image.url  %><br>
-
-   <p class="card-text">By <b> Dr <%= @annonce.user.name %> </b> </p> <br> <br>
-    <p class="card-text"><small class="text-muted">Last updated at <%= @annonce.created_at %> </small></p>
-</div><br><br><br>
-
-  <div id="comments_area">
-   
-    <%= render partial: 'comments/index', locals: { comments: @comments, annonce: @annonce } %>
+<div class="row">
+  <div class="col-3 "></div>
+  <div class="col-lg-6 col-sm-12">
+    <div class="border rounded-bottom border-2 border-success m-4">
+      <div class="container-fluid bg-success">
+        <h6 class="text-center text-white">Publied by <b> Dr <%= @annonce.user.name %> </b>, <%= @annonce.created_at %></h6>
+      </div>
+      <div class="m-5">
+          <h5 class="card-title">  <%= @annonce.title %> </h5>
+          <hr>
+          <p class="card-text">  <%= @annonce.content %> </p><br>
+      
+          <div style="text-align: center;">
+            <%= image_tag(@annonce.image.url,  width: "400px") if @annonce.image && @annonce.image.url  %><br>
+          </div><br
+          <p class="card-text"><small class="text-muted">Last updated at <%= @annonce.updated_at %> </small></p> 
+      </div>
+    </div>
     
+    <div id="comments_area" class="pt-5 ">
+      <h5 class="text-center"> <i class="bi bi-people-fill"></i> Comments</h5><br>
+      <%= render partial: 'comments/index', locals: { comments: @comments, annonce: @annonce } %>
+      
+    </div>
+    <div class="col-sm-6 ps-5">
+      <%= render partial: 'comments/form', locals: { comment: @comment, annonce: @annonce } %>
+    </div>
   </div>
- 
-  <%= render partial: 'comments/form', locals: { comment: @comment, annonce: @annonce } %>
+  <div class="col-3"></div>
+</div>
 
 
-<%= link_to 'Back', annonces_path, class: "btn btn-info btn-sm text-white" %>
+  
+
 <br><br><br><br><br><br>
