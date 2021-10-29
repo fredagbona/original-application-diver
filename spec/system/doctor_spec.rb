@@ -22,7 +22,7 @@ describe "Doctor Registration" do
            click_on 'Add my speciality and hourly'
            fill_in 'doctor[speciality]', with: 'médécine générale'
            fill_in 'doctor[hourly]', with: 'Lundi 14h-15h'
-           click_button 'Add'
+           click_button 'Create Doctor'
            expect(page).to  have_content 'Infos was successfully added.'
         end
         it 'Log out' do
