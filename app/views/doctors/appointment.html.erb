@@ -1,3 +1,8 @@
+<title> Make Appointment | MeetDoctor</title>
+<h1 class="text-center pt-2">Make Appointment</h1>
+<div class="container-fluid bg-danger">
+    <h6 class="text-center text-white"> Nb: Please specify in your message the schedule you have chosen among those indicated on the doctor's profile! | Consult the <%= link_to 'F.A.Q', home_help_path, class: "btn btn-sm btn-info m-2 text-white" %>  for more information.</h6>
+</div>
 <div class="container pt-5">
     <div class="row">
       <div class="col-3">
@@ -16,8 +21,7 @@
               </ul>
             </div>
           <% end %>
-             <p class="text-danger">Nb: Please specify in your message the schedule you have chosen among those indicated on the doctor's profile!</p>
-
+             
           <div class="mt-2">
             <%= form.label :message, class: "form-label" %>
             <%= form.text_area :message, class: "form-control" %>

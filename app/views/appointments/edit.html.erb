@@ -2,5 +2,10 @@
 
 <h1 class="text-center pt-3"> <i class="bi bi-brush"></i>  Editing Appointment</h1>
 
+
+<div class="container-fluid bg-danger">
+    <h6 class="text-center text-white"> Nb: Please specify in your message the schedule you have chosen among those indicated on the doctor's profile! | Consult the <%= link_to 'F.A.Q', home_help_path, class: "btn btn-sm btn-info m-2 text-white" %>  for more information.</h6>
+</div>
+
 <%= render 'form', appointment: @appointment %>
 
