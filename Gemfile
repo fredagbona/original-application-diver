@@ -19,6 +19,7 @@ gem 'rails_admin', '~> 2.0'
 
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'date_validator'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

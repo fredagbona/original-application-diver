@@ -15,6 +15,7 @@
                     <th>Patient Name</th>
                     <th>Doctor Name</th>
                     <th>Appointment Demand</th>
+                    <th>Appointment Date</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -27,6 +28,7 @@
                       <td><%= appointment.user.name %></td>
                       <td><%= appointment.doctor.user.name %></td>
                         <td><%= appointment.message %></td>
+                         <td><%= appointment.date.strftime("%d %b %Y à %H:%M") if appointment.date  %></td>
                         <td><%= link_to  appointment, title: "Show" do %>  <i class="bi bi-eye"></i>
                           <% end %> </td>
                         <td><%= link_to edit_appointment_path(appointment), title: "Edit" do %> <i class="bi bi-pencil" style="color: green;"></i>

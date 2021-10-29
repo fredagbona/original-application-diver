@@ -8,6 +8,7 @@ Patient Name : <%= @appointment.user.name %>
 Patient Email : <%= @appointment.user.email %>
 Patient Address : <%= @appointment.user.address %>
 Patient Number : <%= @appointment.user.phone_number %>
+Hourly : <%= appointment.date.strftime("%d %b %Y à %H:%M") if appointment.date  %>
 
 Message :
 <%= @appointment.message %>

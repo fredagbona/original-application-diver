@@ -26,6 +26,11 @@
             <%= form.label :message, class: "form-label" %>
             <%= form.text_area :message, class: "form-control" %>
           </div>
+
+          <div class="mt-2">
+            <%= form.label :date, class: "form-label" %>
+            <%= form.datetime_select :date, id: "date", order: [:day, :month, :year, :hour, :minute], class: 'form-control', use_month_numbers: false, class: "form-control" %>
+          </div>
         
           <div class="mt-2">
             <%= form.submit class: "btn btn-success" %>

@@ -76,6 +76,6 @@ class DoctorsController < ApplicationController
       params.require(:doctor).permit(:speciality, :hourly)
     end
     def appointment_params
-      params.require(:appointment).permit(:message)
+      params.require(:appointment).permit(:message, :date)
     end
 end
