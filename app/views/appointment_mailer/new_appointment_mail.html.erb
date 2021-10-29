@@ -10,9 +10,10 @@
     
     </head>
     <body>
-        <h1>You got a new appointment demand from <%= @appointment.user.email %></h1> <br>
-
-        <p class="text-center">Appointment Details</p>
+        <div class="container-fluid bg-success">
+            <h1 class="text-center"> <i class="bi bi-bell"></i> You got a new appointment demand from <%= @appointment.user.email %></h1> <br>
+        </div>
+        <p class="text-center"> <i class="bi bi-file-earmark-text"></i> Appointment Details</p>
         <hr>
 
         <p>Patient Name : <%= @appointment.user.name %></p><br>
@@ -23,7 +24,9 @@
         <p class="text-center">Message</p>
         <hr>
         <br>
-
-        <p> <%= @appointment.message %></p>
+        <div class="container border border-1 border-ligh">
+            <p> <%= @appointment.message %></p>
+        </div>
+        
     </body>
 </html>
