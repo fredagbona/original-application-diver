@@ -1,7 +1,7 @@
 <title> Make Appointment | MeetDoctor</title>
 <h1 class="text-center pt-2">Make Appointment</h1>
 <div class="container-fluid bg-danger">
-    <h6 class="text-center text-white"> Nb: Please specify in your message the schedule you have chosen among those indicated on the doctor's profile! | Consult the <%= link_to 'F.A.Q', home_help_path, class: "btn btn-sm btn-info m-2 text-white" %>  for more information.</h6>
+    <h6 class="text-center text-white"> Nb: Please make your request in the "Message" field and fill in the appointment date you have chosen in the "Date" field | Consult the <%= link_to 'F.A.Q', home_help_path, class: "btn btn-sm btn-info m-2 text-white" %>  for more information.</h6>
 </div>
 <div class="container pt-5">
     <div class="row">
@@ -25,16 +25,16 @@
           <div class="mt-2">
             <%= form.label :message, class: "form-label" %>
             <%= form.text_area :message, class: "form-control" %>
-          </div>
+          </div><br>
 
           <div class="mt-2">
             <%= form.label :date, class: "form-label" %>
-            <%= form.datetime_select :date, id: "date", order: [:day, :month, :year, :hour, :minute], class: 'form-control', use_month_numbers: false, class: "form-control" %>
+            <%= form.datetime_field :date, id: "date" , order: [:day, :month, :year, :hour, :minute], class: 'form-control', use_month_numbers: false%>
           </div>
         
           <div class="mt-2">
             <%= form.submit class: "btn btn-success" %>
-          </div>
+          </div><br><br><br>
         <% end %>
       
       </div>

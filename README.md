@@ -13,6 +13,7 @@
 ## Technologies outside curriculum
 
 * Cloudinary
+* Weglot
 
 ## Execution Procedure
 

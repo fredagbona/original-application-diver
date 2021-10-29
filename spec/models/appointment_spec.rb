@@ -22,7 +22,8 @@ describe 'Appointment Creation' do
             @appointment = Appointment.new(
               doctor_id: @doctor.id,
               user_id: @user.id,
-              message: "Title"
+              message: "Title",
+              date: DateTime.now + 1.day
             )
            expect(@appointment).to be_valid
         end

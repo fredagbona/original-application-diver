@@ -46,7 +46,8 @@ class DoctorsController < ApplicationController
         format.html { redirect_to profile_index_path, notice: "Appointment was successfully created." }
  
       else
-        format.html { redirect_to appointment_doctor_path, notice: "Message must not empty"}
+        format.html { render :appointment, status: :unprocessable_entity }
+        format.json { render json: @appointment.errors, status: :unprocessable_entity }
         
       end
     end

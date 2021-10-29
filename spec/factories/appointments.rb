@@ -6,5 +6,6 @@ FactoryBot.define do
       doctor_id {1}
       user_id {1}
       message {'Thanks'}
+      date {DateTime.now + 1.day}
     end
 end

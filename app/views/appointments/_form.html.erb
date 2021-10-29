@@ -25,7 +25,7 @@
 
            <div class="mt-2">
             <%= form.label :date, class: "form-label" %>
-            <%= form.datetime_select :date, id: "date", order: [:day, :month, :year, :hour, :minute], class: 'form-control', use_month_numbers: false, class: "form-control" %>
+            <%= form.datetime_field :date, id: "date" , order: [:day, :month, :year, :hour, :minute], class: 'form-control', use_month_numbers: false%>
           </div>
         
           <div class="mt-2">
