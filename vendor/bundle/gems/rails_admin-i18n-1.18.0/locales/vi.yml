@@ -1,0 +1,129 @@
+vi:
+  admin:
+    actions:
+      bulk_delete:
+        breadcrumb: Xóa nhiều mục
+        bulk_link: Xóa những %{model_label_plural} đã chọn
+        menu: Xóa nhiều mục
+        title: Xóa %{model_label_plural}
+      dashboard:
+        breadcrumb: Trang quản lý
+        menu: Trang quản lý
+        title: Trang quản lý
+      delete:
+        breadcrumb: Xóa
+        done: "đã xóa"
+        link: Xóa '%{object_label}'
+        menu: Xóa
+        title: Xóa %{model_label} '%{object_label}'
+      edit:
+        breadcrumb: Chỉnh sửa
+        done: "đã chỉnh sửa"
+        link: Chỉnh sửa %{model_label} này
+        menu: Chỉnh sửa
+        title: Chỉnh sửa %{model_label} '%{object_label}'
+      export:
+        breadcrumb: Export
+        bulk_link: Export selected %{model_label_plural}
+        done: exported
+        link: Export %{model_label_plural} được tìm thấy
+        menu: Export
+        title: Export %{model_label_plural}
+      history_index:
+        breadcrumb: Lịch sử
+        menu: Lịch sử
+        title: Lịch sử của %{model_label_plural}
+      history_show:
+        breadcrumb: Lịch sử
+        menu: Lịch sử
+        title: Lịch sử của %{model_label} '%{object_label}'
+      index:
+        breadcrumb: "%{model_label_plural}"
+        menu: Danh sách
+        title: Danh sách của %{model_label_plural}
+      new:
+        breadcrumb: Thêm
+        done: "đã tạo"
+        link: Thêm một %{model_label} mới
+        menu: Thêm mới
+        title: Thêm %{model_label}
+      show:
+        breadcrumb: "%{object_label}"
+        menu: Chi tiết
+        title: Chi tiết %{model_label} '%{object_label}'
+      show_in_app:
+        menu: Hiển thị trong ứng dụng
+    export:
+      click_to_reverse_selection: Nhấn vào đây để đảo ngược lựa chọn
+      confirmation: Export to %{name}
+      csv:
+        col_sep: Column separator
+        col_sep_help: Leave blank for default ('%{value}')
+        default_col_sep: ","
+        encoding_to: Encode to
+        encoding_to_help: 'Choose output encoding. Leave empty to let current input encoding untouched: (%{name})'
+        header_for_association_methods: "%{name} [%{association}]"
+        header_for_root_methods: "%{name}"
+        skip_header: No header
+        skip_header_help: Do not output a header (no fields description)
+      display: 'Hiển thị %{name}: %{type}'
+      empty_value_for_associated_objects: "<Rỗng>"
+      fields_from: Các cột của %{name}
+      fields_from_associated: Các cột liên quan %{name}
+      options_for: Tùy chọn cho %{name}
+      select: Chọn các cột để export
+    flash:
+      error: "%{name} thất bại %{action}"
+      model_not_found: 'Không thể tìm thấy lớp ''%{model}'' '
+      noaction: Không có thao tác được chọn
+      object_not_found: Không thể tìm thấy %{model} với id bằng '%{id}'
+      successful: "%{name} thành công %{action}"
+    form:
+      all_of_the_following_related_items_will_be_deleted: "? Các mục có liên quan sau đây có thể bị xóa hoặc mồ côi:"
+      are_you_sure_you_want_to_delete_the_object: Bạn có chắc bạn muốn xóa %{model_name} này
+      basic_info: Thông tin cơ bản
+      bulk_delete: 'Các đối tượng sau đây sẽ bị xóa, một số phụ thuộc liên quan của các đối tượng này có thể bị xóa hoặc mồ côi:'
+      cancel: Hủy
+      char_length_of: dài của
+      char_length_up_to: dài tới
+      confirmation: Có, chắc chắn!
+      new_model: "%{name} (mới)"
+      one_char: ký tự
+      optional: Không bắt buộc, tùy chọn
+      required: Bắt buộc
+      save: Lưu
+      save_and_add_another: Lưu và thêm mới
+      save_and_edit: Lưu và chỉnh sửa
+    misc:
+      add_filter: Thêm bộ lọc
+      add_new: Thêm mới
+      ago: trước
+      bulk_menu_title: Các mục đã chọn
+      chose_all: Chọn tất cả
+      chosen: Chọn %{name}
+      clear_all: Xóa tất cả
+      down: Xuống
+      filter: Lọc
+      filter_date_format: dd/mm/yy
+      log_out: "Đăng xuất"
+      navigation: Danh mục chính
+      refresh: Làm mới
+      remove: Xóa
+      search: Tìm kiếm
+      show_all: Hiện tất cả
+      up: Lên
+    table_headers:
+      changes: Thay đổi
+      created_at: Ngày/Giờ
+      item: Mục
+      last_used: Lần cuối sử dụng
+      message: Tin nhắn
+      model_name: Tên lớp
+      records: Hồ sơ
+      username: User
+    home:
+      name: Trang chủ
+    pagination:
+      next: Tiếp &raquo;
+      previous: "&laquo; Trước"
+      truncate: "…"

@@ -1,0 +1,49 @@
+fr:
+  activerecord:
+    models:
+      annonce: Annonce  #g
+      appointment: Rendez-vous  #g
+      comment: Commentaire  #g
+      doctor: Médecin  #g
+      user: Utilisateur  #g
+
+    attributes:
+      annonce:
+        comments: commentaires  #g
+        content: Contenu  #g
+        image: Image  #g
+        title: Titre  #g
+        user: Utilisateur  #g
+
+      appointment:
+        date: Date  #g
+        doctor: Docteur  #g
+        message: Un message  #g
+        user: user  #g
+
+      comment:
+        annonce: Annonces  #g
+        content: Teneur  #g
+        user: Utilisateur  #g
+
+      doctor:
+        appointments: Rendez-vous  #g
+        hourly: Horaire  #g
+        speciality: Spécialité  #g
+        user: Utilisateur  #g
+
+      user:
+        address: Adresse  #g
+        admin: Administrateur  #g
+        annonces: Annonces  #g
+        appointments: Rendez-vous  #g
+        avatar: Avatar  #g
+        comments: commentaires  #g
+        email: E-mail  #g
+        encrypted_password: Mot de passe crypté  #g
+        establishment: Docteur  #g
+        name: Nom  #g
+        phone_number: Numéro de téléphone  #g
+        remember_created_at: Rappelez-vous créé à  #g
+        reset_password_sent_at: Réinitialiser le mot de passe envoyé à  #g
+        reset_password_token: Réinitialiser le jeton de mot de passe  #g

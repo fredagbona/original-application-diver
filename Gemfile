@@ -14,7 +14,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'faker'
-
+gem 'rails_admin-i18n'
+gem 'i18n_generators'
 gem 'rails_admin', '~> 2.0'
 
 gem 'carrierwave'
