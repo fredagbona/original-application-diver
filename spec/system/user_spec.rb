@@ -9,8 +9,8 @@ describe "User Registration" do
             fill_in 'user[address]', with: 'Villa'
             fill_in 'user[phone_number]', with: '96314572'
             fill_in 'user[password]', with: 'password'
-            click_button 'Sign up'
-            expect(page).to  have_content 'Welcome! You have signed up successfully.'
+            click_on 'Sign up!'
+            expect(page).to  have_content 'MeetDoctor'
         end
         it 'Session' do
            user = FactoryBot.create(:user) 
