@@ -19,8 +19,8 @@ describe "Add Annonce" do
            click_on 'Make Appointment'
            appointment = FactoryBot.create(:appointment) 
            fill_in 'appointment[message]', with: 'Thanks'
-           fill_in 'appointment[date]', with: DateTime.now + 1.day
-           click_button 'Create Appointment'
+           fill_in 'appointment[date]', with: DateTime.now + 2.day
+           click_on 'Create Appointment'
            expect(page).to  have_content 'Appointment was successfully created.'
         end
         

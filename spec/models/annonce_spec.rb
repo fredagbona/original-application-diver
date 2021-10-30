@@ -23,6 +23,7 @@ require 'rails_helper'
             @annonce = Annonce.new(
                 title: "Title",
               content: "Abomey"
+              
             )
            expect(@annonce).to be_valid
         end
